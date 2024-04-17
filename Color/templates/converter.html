@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Converter</title>
+</head>
+<body>
+    <h1>Color Converter</h1>
+    <form method="post">
+        <label for="hex_color">Enter HEX Color:</label>
+        <input type="text" id="hex_color" name="hex_color" required>
+        <button type="submit">Convert</button>
+    </form>
+    {% if h is not none %}
+    <p>HSV values:</p>
+    <ul>
+        <li>Hue: {{ "%.2f" % h }}</li>
+        <li>Saturation: {{ "%.2f" % s }}</li>
+        <li>Value: {{ "%.2f" % v }}</li>
+    </ul>
+    {% endif %}
+</body>
+</html>
